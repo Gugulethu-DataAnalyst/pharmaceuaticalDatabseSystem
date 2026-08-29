@@ -236,7 +236,6 @@ public class userPanel extends JPanel {
             /*=================================================
             CHECK REQUIRED FIELDS
             =================================================*/
-
             if (
                     username.isEmpty()
                     || password.isEmpty()
@@ -257,7 +256,6 @@ public class userPanel extends JPanel {
             /*=================================================
             CREATE USER OBJECT
             =================================================*/
-
             User user =
                     new User(
                             0,
@@ -318,7 +316,6 @@ public class userPanel extends JPanel {
     =========================================================*/
 
     private void loadUsers() {
-
         // Remove existing rows
         tableModel.setRowCount(0);
 
@@ -328,9 +325,7 @@ public class userPanel extends JPanel {
         /*=====================================================
         ADD EACH USER TO TABLE
         =====================================================*/
-
         for (User user : users) {
-
             tableModel.addRow(
                     new Object[]{
                             user.getUserID(),
@@ -387,7 +382,6 @@ public class userPanel extends JPanel {
                         .toString()
         );
 
-
         // We do not load the password
         passwordField.setText("");
     }
@@ -396,19 +390,15 @@ public class userPanel extends JPanel {
     /*=========================================================
     DELETE USER
     =========================================================*/
-
     private void deleteUser() {
-
         int selectedRow =
                 userJTable.getSelectedRow();
-
 
         /*=====================================================
         CHECK WHETHER USER WAS SELECTED
         =====================================================*/
 
         if (selectedRow == -1) {
-
             JOptionPane.showMessageDialog(
                     this,
                     "Please select a user to delete.",
@@ -475,7 +465,7 @@ public class userPanel extends JPanel {
                     JOptionPane.INFORMATION_MESSAGE
             );
 
-
+            //initailzing clear form function
             clearForm();
 
 
@@ -499,15 +489,10 @@ public class userPanel extends JPanel {
     =========================================================*/
 
     private void clearForm() {
-
         usernameField.setText("");
-
         passwordField.setText("");
-
         fullNameField.setText("");
-
         roleComboBox.setSelectedIndex(0);
-
         userJTable.clearSelection();
     }
 }
