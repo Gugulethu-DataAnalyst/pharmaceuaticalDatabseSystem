@@ -1,0 +1,22 @@
+
+
+Version:	3.50
+CmdLine:	C:\Users\User\OneDrive\Desktop\2026_SecondSemester\Assignments\PharmacyHealthcare_System\gugulethuDladla_pims.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\User\OneDrive\Desktop\2026_SecondSemester\Assignments\PharmacyHealthcare_System\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\
+Substitute:	PATH = C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\ucrt64\bin;;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\\bin
+JRE paths:	C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\ucrt64\bin;;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\\bin
+Check launcher:	C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin\javaw.exe (OK)
+Version string: 1.017.000_017 / 64-Bit (OK)
+Main class:	app.PIMSApplication
+Add classpath:	lib\mysql-connector-j-26.7.0.jar
+Launcher:	C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\User\OneDrive\Desktop\2026_SecondSemester\Assignments\PharmacyHealthcare_System\gugulethuDladla_pims.exe;lib\mysql-connector-j-26.7.0.jar" app.PIMSApplication
+Args length:	179/32768 chars
+Exit code:	0

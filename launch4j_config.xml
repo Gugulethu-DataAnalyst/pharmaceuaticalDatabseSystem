@@ -1,0 +1,21 @@
+<launch4jConfig>
+  <!-- Input JAR -->
+  <jar>gugulethuDladla_pims.jar</jar>
+
+  <!-- Output EXE -->
+  <outfile>gugulethuDladla_pims.exe</outfile>
+
+  <!-- Main class -->
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <classPath>
+    <mainClass>app.PIMSApplication</mainClass>
+    <cp>lib/mysql-connector-j-26.7.0.jar</cp>
+  </classPath>
+
+  <!-- JRE settings -->
+  <jre>
+        <minVersion>17</minVersion>
+  </jre>
+
+</launch4jConfig>
