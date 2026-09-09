@@ -11,8 +11,13 @@ import Panels.AdminDashboard;
 import Panels.cashierDashboard;
 
 
-//creating the the login panel extended by JPanel
+/*=======================================
+
+creating the the login panel extended by JPanel
+
+=========================================*/
 public class LoginPanels extends JPanel{
+    
     //creating private variables for the username, password, and button
     private JTextField usernameField;
     private JPasswordField passwordField;
@@ -21,22 +26,65 @@ public class LoginPanels extends JPanel{
     //creating a private userDao
     private userDao userDao;
 
-
     //creating a public login panel function
     public LoginPanels(){
 
         //create user doa
         userDao = new userDao();
 
+        //Creating colors for the login system
+        Color blueColor = new Color(41, 128, 185);
+        Color lightGreyColor = new Color(230, 230, 230);
+        Color darkGreyColor = new Color(80, 80, 80);
+
+        //making the background color grey
+        setBackground(lightGreyColor);
+
         
-        //creating components
+        /*======================================
+        creating components
+        ========================================*/
+        JLabel titleLabel = new JLabel("HealthFirst Pharmacy");
         JLabel usernameLabel = new JLabel("Username: ");
         JLabel passwordLabel = new JLabel("Password: ");
-
         usernameField = new JTextField(20);
         passwordField = new JPasswordField(20);
-
         loginButton = new JButton("Login");
+
+        /*==========================================
+        Title design
+        ==========================================*/
+        titleLabel.setFont( new Font( "Arial", Font.BOLD, 24));
+        titleLabel.setForeground( blueColor );
+
+        /*==========================================
+        label design
+        ==========================================*/
+        usernameLabel.setForeground( darkGreyColor );
+        passwordLabel.setForeground( darkGreyColor );
+
+
+        usernameLabel.setFont(new Font( "Arial", Font.BOLD, 14 ));
+        passwordLabel.setFont(new Font( "Arial",Font.BOLD,14));
+
+        /*==========================================
+        Text field design
+        ==========================================*/
+        usernameField.setBackground( Color.WHITE);
+        passwordField.setBackground(Color.WHITE);
+
+
+        /*==========================================
+        Login button design
+        ==========================================*/
+        loginButton.setBackground( blueColor);
+
+        loginButton.setForeground( Color.WHITE);
+
+        loginButton.setFont(new Font("Arial",Font.BOLD,14));
+
+        loginButton.setFocusPainted( false);
+
 
         //creating the layout for the GUI
         setLayout(new GridBagLayout());
@@ -75,6 +123,7 @@ public class LoginPanels extends JPanel{
         loginButton.addActionListener(e ->login());
     }
 
+    //creation of the login function
     private void login(){
         String username = usernameField.getText();
 
@@ -105,19 +154,19 @@ public class LoginPanels extends JPanel{
                 JOptionPane.INFORMATION_MESSAGE
             );
             //checking the user role
-            if(user.getRole().equals("Admin")){
+            if("Admin".equalsIgnoreCase(user.getRole())){
                 System.out.println("Admin logged in.");
                 
                 JFrame currentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
                 currentFrame.dispose();
                 new AdminDashboard();
 
-            } else if(user.getRole().equals("Cashier")){
-                System.out.println("Cashier logged in");
+            } else if("Cashier".equalsIgnoreCase(user.getRole())){
+                System.out.println("Cashier logged in. \nUser ID: " + user.getUserID());
 
                 JFrame currentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
                 currentFrame.dispose();
-                new cashierDashboard();
+                new cashierDashboard(user.getUserID());
 
             }
         } else{
